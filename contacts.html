@@ -16,13 +16,21 @@
   </header>
 
   <main>
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:f1podcast@example.com">f1podcast@example.com</a></p>
-    <p>Twitter: <a href="https://twitter.com/f1podcast">@f1podcast</a></p>
-    <form>
-      <label for="message">Send us a message:</label><br>
-      <textarea id="message" rows="5" cols="40"></textarea><br>
-      <button type="submit">Submit</button>
+    <h2>Send us your Recommendation</h2>
+    <form action="https://formspree.io/f/xdkqwyqg" method="POST">
+      <!-- Title field -->
+      <label for="title">Recommendation Title:</label><br>
+      <input type="text" id="title" name="title" required><br><br>
+
+      <!-- Message field -->
+      <label for="message">Recommendation:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+
+      <!-- Hidden field to tag submissions -->
+      <input type="hidden" name="_subject" value="New Podcast Recommendation">
+
+      <!-- Submit button -->
+      <button type="submit">Send Recommendation</button>
     </form>
   </main>
 
